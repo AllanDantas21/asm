@@ -11,7 +11,9 @@ _start:
   mov ecx, msg
   mov edx, len
   int 0x80
+  JMP exit
 
+exit:
   mov eax, 1
   xor ebx, ebx
   int 0x80
