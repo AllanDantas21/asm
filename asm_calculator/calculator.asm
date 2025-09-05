@@ -10,12 +10,9 @@ section .text
   global _start
 
 _start:
-  nop
-
-  push ebp
   mov ebp, esp
 
-  cmp dword [ebp + 4], 1
+  cmp dword [ebp], 1
   je  withoutArgs
 
   mov eax, sys_write
