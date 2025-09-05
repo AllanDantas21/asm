@@ -10,12 +10,12 @@ LDFLAGS = -m elf_i386 -s
 	$(LD) $(LDFLAGS) -o $@ $<
 	rm $<
 
-calculator: calculator.o
+strlen: strlen.o
 
 clean: 
 	rm -f *.o
 
 fclean:
-	rm -f *.o calculator
+	rm -f *.o strlen
 
 .PHONY: clean
